@@ -41,7 +41,7 @@ jobs:
           7z a "LocalAI-windows.zip" localai
 
       - name: Upload Windows build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: localai-windows-build
           path: "LocalAI-windows.zip"
@@ -85,7 +85,7 @@ jobs:
           7z a "LocalAI-mac-arm64.zip" localai
 
       - name: Upload Mac build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: localai-mac-arm64-build
           path: "LocalAI-mac-arm64.zip"
@@ -129,7 +129,7 @@ jobs:
           7z a "LocalAI-mac-x64.zip" localai
 
       - name: Upload Mac build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: localai-mac-x64-build
           path: "LocalAI-mac-x64.zip"
