@@ -32,7 +32,7 @@ export class NovelAiImageGenService implements ImageGenService {
     const modelMap = {
       anime: 'nai-diffusion-4-full',
       inpaint: 'nai-diffusion-4-inpainting',
-      i2i: 'nai-diffusion-4-full',
+      i2i: 'nai-diffusion-4-full', 
     } as const;
     return modelMap[model];
   }
