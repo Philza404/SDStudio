@@ -38,7 +38,7 @@ jobs:
           7z a "SDStudio-${{ env.version }}-${{ env.commit_hash }}-windows.zip" "SDStudio-${{ env.version }}-${{ env.commit_hash }}-windows"
 
       - name: Upload Windows build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: windows-build
           path: "SDStudio-${{ env.version }}-${{ env.commit_hash }}-windows.zip"
@@ -108,7 +108,7 @@ jobs:
           mv "release/build/SDStudio-${{ env.version }}-mac-arm64.dmg" "release/build/SDStudio-${{ env.version }}-${{ env.commit_hash }}-mac-arm64.dmg"
 
       - name: Upload Mac build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mac-build
           path: "release/build/SDStudio-${{ env.version }}-${{ env.commit_hash }}-mac-*.dmg"
@@ -185,7 +185,7 @@ jobs:
           mv ${{steps.sign_app.outputs.signedReleaseFile}} "SDStudio-${{ env.version }}-${{ env.commit_hash }}-android.apk"
 
       - name: Upload Android build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: android-build
           path: "SDStudio-${{ env.version }}-${{ env.commit_hash }}-android.apk"
